@@ -1,0 +1,27 @@
+[Desktop Entry]
+Name=RPM Package Database
+Name[cs]=Databáze balíčků RPM
+Name[de]=RPM-Paketdatenbank
+Name[es]=Base de datos de paquetes RPM
+Name[fr]=Base RPM
+Name[lv]=RPM Pakotņu Datu bāze
+Name[ms]=Pangkalan data Pakej RPM
+Name[nl]=RPM-pakketdatabase
+Name[sv]=RPM-paketdatabas
+Name[vi]=Cơ Sở Dữ Liệu Gói RPM
+Comment=Browse the set of packages installed on the system
+Comment[cs]=Procházet sadu balíčků nainstalovaných v systému
+Comment[de]=Die Datenbank der auf diesem System installierten Pakete anzeigen
+Comment[es]=Ver el conjunto de paquetes instalados en el sistema
+Comment[fr]=Liste des paquets RPM installés
+Comment[lv]=Pārlūkot sistēmā instalēto pakotņu kopu
+Comment[ms]=Lungsur set pakej yang dipasang pada sistem
+Comment[nl]=De verzameling pakketten bekijken die op dit systeem zijn geïnstalleerd
+Comment[sv]=Bläddra bland de samlingar paket som är installerade på systemet
+Comment[vi]=Duyệt bộ gói tin đã cài đặt trên hệ thống
+Type=Application
+Icon=document-icons/gnome-application-x-rpm.png
+Terminal=false
+Exec=nautilus rpmdb:
+TryExec=nautilus
+Categories=GNOME;Application;System;
