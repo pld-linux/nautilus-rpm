@@ -1,8 +1,10 @@
+%define	ver_rpm	4.3-0.20030610.29
+
 Summary:	RPM extension for Nautilus
 Summary(pl):	Wsparcie Nautilusa dla formatu RPM
 Name:		nautilus-rpm
 Version:	0.1
-Release:	8
+Release:	9
 License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.1/%{name}-%{version}.tar.bz2
@@ -12,9 +14,11 @@ Source2:	%{name}.png
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gnome-vfs2-devel >= 2.4.0
 BuildRequires:	libtool
-BuildRequires:	nautilus-devel >= 2.3.7-3
-BuildRequires:	rpm-devel
+BuildRequires:	nautilus-devel >= 2.4.0
+BuildRequires:	rpm-devel >= %{ver_rpm}
+Requires:	rpm >= %{ver_rpm}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
