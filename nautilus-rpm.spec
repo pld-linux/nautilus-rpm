@@ -6,7 +6,7 @@ Summary:	RPM extension for Nautilus
 Summary(pl):	Wsparcie Nautilusa dla formatu RPM
 Name:		nautilus-rpm
 Version:	0.1
-Release:	4
+Release:	5
 License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.1/%{name}-%{version}.tar.bz2
