@@ -6,10 +6,11 @@ Summary:	RPM extension for Nautilus
 Summary(pl):	Wsparcie Nautilusa dla formatu RPM
 Name:		nautilus-rpm
 Version:	0.1
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.1/%{name}-%{version}.tar.bz2
+Patch0:		%{name}-sysconfig.patch
 URL:		http://www.gnome.org/
 BuildRequires:	nautilus-devel
 BuildRequires:	rpm-devel
@@ -23,8 +24,12 @@ Wsparcie Nautilusa dla formatu RPM.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+%{__aclocal}
+%{__autoconf}
+%{__automake}
 %configure
 
 %{__make}
@@ -45,8 +50,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS README ChangeLog
 %attr(755,root,root) %{_libdir}/nautilus-rpm*
 %{_sysconfdir}/gnome-vfs-2.0/modules/rpmdb.conf
-# fix location of desktop file
-%{_sysconfdir}/X11/sysconfig/*.desktop
+%{_datadir}/applications/*.desktop
 %{_libdir}/gnome-vfs-2.0/modules/*
 %{_libdir}/bonobo/servers/*
 %{_datadir}/mime-info/*
