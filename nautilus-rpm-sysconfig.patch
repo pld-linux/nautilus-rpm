@@ -1,0 +1,12 @@
+diff -ruN src/Makefile.am src/Makefile.am
+--- nautilus-rpm-0.1.orig/src/Makefile.am	Tue Jan  7 11:30:40 2003
++++ nautilus-rpm-0.1/src/Makefile.am	Mon Feb 10 23:14:20 2003
+@@ -10,7 +10,7 @@
+ vfsmoduledir = $(libdir)/gnome-vfs-2.0/modules
+ vfsmoduleconfdir = $(sysconfdir)/gnome-vfs-2.0/modules
+ mimeinfodir = $(datadir)/mime-info
+-systemsettingsdir = $(sysconfdir)/X11/sysconfig
++systemsettingsdir = $(datadir)/applications
+ 
+ # the gnome-vfs method ...
+ vfsmodule_LTLIBRARIES = librpmdb-method.la
