@@ -44,9 +44,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 
-install -d $RPM_BUILD_ROOT%{_datadir}/applications
-install %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/applications
-
+install -d $RPM_BUILD_ROOT%{_desktopdir}
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 %find_lang %{name} --with-gnome --all-name
 
@@ -58,7 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS README ChangeLog
 %attr(755,root,root) %{_libdir}/nautilus-rpm*
 %{_sysconfdir}/gnome-vfs-2.0/modules/rpmdb.conf
-%{_datadir}/applications/*.desktop
+%{_desktopdir}/*.desktop
 %{_libdir}/gnome-vfs-2.0/modules/*
 %{_libdir}/bonobo/servers/*
 %{_datadir}/mime-info/*
