@@ -25,3 +25,4 @@ Terminal=false
 Exec=nautilus rpmdb:
 TryExec=nautilus
 Categories=GNOME;Application;System;
+OnlyShowIn=GNOME;
