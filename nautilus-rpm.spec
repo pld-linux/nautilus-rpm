@@ -1,5 +1,9 @@
-Summary:	RPM Extension for Nautilus
-Summary(pl):	Rozszerzenie Nautilusa o RPM
+#
+# todo:
+# - fix location of desktop file
+#
+Summary:	RPM extension for Nautilus
+Summary(pl):	Wsparcie Nautilusa dla formatu RPM
 Name:		nautilus-rpm
 Version:	0.1
 Release:	1
@@ -11,10 +15,10 @@ BuildRequires:	nautilus-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-RPM Extension for nautilus.
+RPM extension for Nautilus.
 
 %description -l pl
-Rozszerzenie nautilusa o RPM.
+Wsparcie Nautilusa dla formatu RPM.
 
 %prep
 %setup -q
@@ -30,7 +34,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 
-
 %find_lang %{name} --with-gnome --all-name
 
 %clean
@@ -41,6 +44,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS README ChangeLog
 %attr(755,root,root) %{_libdir}/nautilus-rpm*
 %{_sysconfdir}/gnome-vfs-2.0/modules/rpmdb.conf
+# fix location of desktop file
 %{_sysconfdir}/X11/sysconfig/*.desktop
 %{_libdir}/gnome-vfs-2.0/modules/*
 %{_libdir}/bonobo/servers/*
