@@ -8,7 +8,7 @@ Release:	9
 License:	LGPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.1/%{name}-%{version}.tar.bz2
-# Source0-md5: a073a09a9ac287ffcfa52c81e72e8028
+# Source0-md5:	a073a09a9ac287ffcfa52c81e72e8028
 Source1:	%{name}-rpmdb.desktop
 Source2:	%{name}.png
 URL:		http://www.gnome.org/
