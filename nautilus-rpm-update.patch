@@ -1,0 +1,24 @@
+--- nautilus-rpm-0.1/src/nautilus-rpm-view.c.orig	2003-01-06 16:33:59.000000000 +0100
++++ nautilus-rpm-0.1/src/nautilus-rpm-view.c	2005-03-20 11:59:10.447800200 +0100
+@@ -139,7 +139,7 @@
+ 	res = rpmReadPackageHeader(fd, &header, NULL, NULL, NULL);
+ #endif
+ 	g_free(filename);
+-	if (res != 0 || !header) {
++	if ((res != RPMRC_OK && res != RPMRC_NOTTRUSTED && res != RPMRC_NOKEY)|| !header) {
+ 	    nautilus_view_report_load_failed(view);
+ 	    if (header) headerFree(header);
+ 	    Fclose(fd);
+@@ -164,7 +164,11 @@
+ rpm_view_activate_uri (RpmInfo *rpminfo, const gchar *uri,
+ 		       NautilusView *self)
+ {
+-    nautilus_view_open_location_in_this_window(self, uri);
++    nautilus_view_open_location(self,
++				uri,
++				(Nautilus_ViewFrame_OpenMode)0,
++				(Nautilus_ViewFrame_OpenFlags)0,
++				NULL);
+ }
+ 
+ 
