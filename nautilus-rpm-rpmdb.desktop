@@ -26,3 +26,5 @@ Exec=nautilus rpmdb:
 TryExec=nautilus
 Categories=GNOME;Application;System;
 OnlyShowIn=GNOME;
+Encoding=UTF-8
+# vi: encoding=utf-8
