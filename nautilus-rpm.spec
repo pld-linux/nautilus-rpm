@@ -12,6 +12,7 @@ Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.1/%{name}-%{version}.tar.bz2
 URL:		http://www.gnome.org/
 BuildRequires:	nautilus-devel
+BuildRequires:	rpm-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
