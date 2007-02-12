@@ -1,7 +1,7 @@
 %define	ver_rpm	4.3-0.20030610.29
 
 Summary:	RPM extension for Nautilus
-Summary(pl):	Wsparcie Nautilusa dla formatu RPM
+Summary(pl.UTF-8):   Wsparcie Nautilusa dla formatu RPM
 Name:		nautilus-rpm
 Version:	0.1
 Release:	10
@@ -25,7 +25,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 RPM extension for Nautilus.
 
-%description -l pl
+%description -l pl.UTF-8
 Wsparcie Nautilusa dla formatu RPM.
 
 %prep
